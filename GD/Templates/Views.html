@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Views</title>
+</head>
+<body>
+<form action="" method="post"><!--to close tag control + forward slash comment-->
+        <table border="1">
+            <tr>
+                <th> ID</th><!-- table head-->
+                <th> NAME</th>
+                <th> ADDRESS</th>
+                <th> ACTION</th>
+            </tr>
+            {% for people in user_details%}<!-- start of for loop-->
+            <tr><!-- table row-->
+                <td><!-- table data-->
+                {{ people.Emp_id }}
+                </td>
+                <td>
+                {{ people.Name }}
+                </td>
+                <td>
+                {{ people.Address }}
+                </td>
+                <td>
+                <a href="/delete2/{{people.Emp_id}}"> delete</a>
+                </td>
+
+            </tr>
+            {% endfor %}<!-- end of for loop-->
+        </table>
+    </form>
+
+</body>
+</html>
